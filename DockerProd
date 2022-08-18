@@ -1,0 +1,6 @@
+FROM tomcat:8.5.82-jre8-temurin-focal
+
+ADD ./myboxfuse/target/hello-1.0.war /var/lib/tomcat8/webapps
+
+EXPOSE 8080
+CMD ["/usr/local/tomcat9/bin/catalina.sh", "run"]
